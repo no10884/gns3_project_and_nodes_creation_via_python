@@ -4,7 +4,7 @@ import time
 
 ip_adr = "192.168.59.129:80"
 api_url = f"http://{ip_adr}/v2"
-template_id = "1931978b-f91f-4928-8fee-ac31ca4d887c"
+your_docker_template_id = "1931978b-f91f-4928-8fee-ac31ca4d887c"
 
 headers = {'Content-Type': 'application/x-www-form-urlencoded',}
 
@@ -34,7 +34,7 @@ data_node1 = {
 data_node1 = json.dumps(data_node1)
 
 response_node1 = requests.post(
-    f'{api_url}/projects/{project_id}/templates/{template_id}', 
+    f'{api_url}/projects/{project_id}/templates/{your_docker_template_id}', 
     headers = headers, 
     data=data_node1
 )
@@ -53,7 +53,7 @@ data_node2 = {
 data_node2 = json.dumps(data_node2)
 
 response_node2 = requests.post(
-    f'{api_url}/projects/{project_id}/templates/{template_id}', 
+    f'{api_url}/projects/{project_id}/templates/{your_docker_template_id}', 
     headers = headers, 
     data=data_node2
 )
